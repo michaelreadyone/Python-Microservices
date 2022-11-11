@@ -34,4 +34,17 @@
 
 --- 37:50 ---
 
+set up flask server
+
 Product will be write in Django admin, then it will send a message to queue, and then main will create an identical item including id. So autoincrement set to False in main.py
+
+--- 51:47 ---
+
+Begin RabbitMQ,
+
+run `docker-compose up -d db` to run db first, then run
+`docker-compose up`
+
+finish of RabbitMQ initial setup
+
+--- 1:04:24 ---
