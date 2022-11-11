@@ -33,3 +33,5 @@
 - write urls.py to register api, also regiester in admin/urls.py
 
 --- 37:50 ---
+
+Product will be write in Django admin, then it will send a message to queue, and then main will create an identical item including id. So autoincrement set to False in main.py
