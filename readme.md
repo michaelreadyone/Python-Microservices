@@ -61,3 +61,9 @@ How Data Consistency is guaranteed here?
 Once admin received a CRUD request in views.py, it will send the request in JSON format to consumer.py in main, so that the main repeat the CRUD in itself.
 
 main.py API can't directly serialize data from db, need @dataclass to make it work
+
+finish set up backend
+
+--- 1:25:45 --- start of frontend
+
+
