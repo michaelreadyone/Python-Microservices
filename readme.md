@@ -38,6 +38,14 @@ set up flask server
 
 Product will be write in Django admin, then it will send a message to queue, and then main will create an identical item including id. So autoincrement set to False in main.py
 
+Steps for flask migrate
+
+```bash
+python manager.py db init
+python manager.py db migrate
+python manager.py db upgrade
+```
+
 --- 51:47 ---
 
 Begin RabbitMQ,
@@ -48,3 +56,8 @@ run `docker-compose up -d db` to run db first, then run
 finish of RabbitMQ initial setup
 
 --- 1:04:24 ---
+
+How Data Consistency is guaranteed here?
+Once admin received a CRUD request in views.py, it will send the request in JSON format to consumer.py in main, so that the main repeat the CRUD in itself.
+
+main.py API can't directly serialize data from db, need @dataclass to make it work
